@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#2b2b2b;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+
+  min-height:100vh;
+
+  padding-top:20px;
+}
+
+.banner{
+  width:1200px;
+  height:250px;
+
+  position:relative;
+  overflow:hidden;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+  url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  border:4px solid #444;
+
+  box-shadow:
+  0 0 25px rgba(0,0,0,.6),
+  inset 0 0 20px rgba(255,255,255,.05);
+}
+
+.pokemon-left,
+.pokemon-right{
+  position:absolute;
+  bottom:0;
+
+  width:320px;
+
+  transition:0.4s;
+
+  filter:drop-shadow(0 0 12px rgba(0,0,0,.8));
+}
+
+.pokemon-left{
+  left:20px;
+}
+
+.pokemon-right{
+  right:20px;
+}
+
+.pokemon-left:hover,
+.pokemon-right:hover{
+  transform:scale(1.08);
+}
+
+.title{
+  position:absolute;
+
+  top:40px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:70px;
+  font-weight:bold;
+
+  letter-spacing:4px;
+
+  color:#28b8ff;
+
+  text-shadow:
+  4px 4px 0 #000,
+  0 0 20px rgba(40,184,255,.8);
+}
+
+.menu{
+  position:absolute;
+
+  bottom:20px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:92%;
+  height:65px;
+
+  background:rgba(25,25,25,.95);
+
+  border-radius:12px;
+
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+
+  border:2px solid #555;
+}
+
+.menu button{
+  background:none;
+  border:none;
+
+  color:white;
+
+  font-size:22px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.menu button:hover{
+  color:#29b6ff;
+
+  transform:translateY(-2px);
+}
+
+.search-box{
+  background:#555;
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+}
+
+.search-box input{
+  background:none;
+  border:none;
+  outline:none;
+
+  color:white;
+
+  font-size:16px;
+
+  width:180px;
+}
+
+.search-box input::placeholder{
+  color:#ddd;
+}
